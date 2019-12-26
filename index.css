@@ -1,3 +1,7 @@
+* {
+  outline: none;
+}
+
 html,
 body {
   height: 100%;
@@ -5,13 +9,14 @@ body {
   padding: 0;
   font-family: "Helvetica";
   text-align: center;
+  line-height: 1.5em;
 }
 
 #map {
   height: 50%;
 }
 
-.form {
+.main {
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
@@ -33,7 +38,7 @@ label {
   margin-bottom: 10px;
 }
 
-input {
+.group input {
   width: 100%;
   padding: 10px;
   font-family: 'Helvetica';
@@ -58,6 +63,38 @@ button {
   background-color: white;
   border: 1px solid lightgray;
   box-shadow: 1px 1px 2px 0px lightslategray;
-  margin: 10px 10px;
+}
+
+button:hover {
+  cursor: pointer
+}
+
+.calc {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 10px 0px;
+}
+
+.calc > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-gap: 10px;
+  margin: 10px;
+  align-items: center;
+}
+
+.label {
+  display: block;
+}
+
+.calc input[type='number'] {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  font-family: 'Helvetica';
+  border-radius: 0.25rem;
+  border: 1px solid lightgray;
+  margin: 0px 10px;
 }
 

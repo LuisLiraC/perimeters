@@ -10,16 +10,76 @@
 
   <body>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <div id="map"></div>
-    <div class="form">
+
+    <div class="main">
       <p>
         A partir de dos puntos dados en coordenadas cálcula
         el centro entre, entonces al determinar el centro trazará un perímetros circular con la longitud de radio que le fue indicada.
       </p>
       <p>
+        Los valores de las coordenadas deben ser en decimales. Puedes usar la calculadora para obtener los decimales.
+      </p>
+      <p>Por ejemplo:
+        <br>
+        Guadalajara está en las coordenadas 20°40′36″N 103°20′51″O. 
+        <br>
+        Decimales: Latitud = 20.676667 y Longitud -103.3475
+      </p>
+      <div class="calc">
+        <div>
+          <span>Latitud</span>
+          <div class="degrees">
+            <span class="label">
+              <input type="radio" name="calcLat" value="1">N
+              <input type="radio" name="calcLat" value="-1">S
+            </span>
+            <input type="number" id="degreesLat">
+          </div>
+          <div>
+            <span for="minutes" class="label">'</span>
+            <input type="number" name="minutes" id="minutesLat">
+          </div>
+          <div>
+            <span for="seconds" class="label">"</span>
+            <input type="number" name="seconds" id="secondsLat">
+          </div>
+          <div>
+            <button id="calcLatButton">Calcular</button>
+          </div>
+          <div>
+            <span class="label">Decimales Latitud</span>
+            <input type="number" id="latDecimals">
+          </div>
+        </div>
+        <div>
+          <span>Longitud</span>
+          <div class="degrees">
+            <span class="label">
+              <input type="radio" name="calcLng" value="1">E
+              <input type="radio" name="calcLng" value="-1">W
+            </span>
+            <input type="number" id="degreesLng">
+          </div>
+          <div>
+            <span for="minutes" class="label">'</span>
+            <input type="number" id="minutesLng">
+          </div>
+          <div>
+            <span for="seconds" class="label">"</span>
+            <input type="number" id="secondsLng">
+          </div>
+          <div>
+            <button id="calcLngButton">Calcular</button>
+          </div>
+          <div>
+            <span class="label">Decimales Longitud</span>
+            <input type="number" id="lngDecimals">
+          </div>
+        </div>
+      </div>
+      <p>
         Se pueden trazar varios perímetros al mismo tiempo, sólo es necesario hacer click en "Agregar otro perímetro" para que se agreguen un nuevo formulario.
       </p>
-      <p>Guadalajara está en: lat: 20.676667 y lng: -103.3475</p>
       <button id="draw">Trazar perímetros</button>
       <button id="add">Agregar otro perímetro</button>
       <button id="clear">Limpiar mapa</button>
@@ -27,7 +87,10 @@
 
       </div>
     </div>
+    <div id="map"></div>
 
+
+    <script src='./calc.js'></script>
     <script src='./index.js'></script>
   </body>
 </html>
