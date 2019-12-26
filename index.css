@@ -1,0 +1,64 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica";
+  text-align: center;
+}
+
+#map {
+  height: 50%;
+}
+
+.form {
+  padding: 20px;
+  max-width: 1000px;
+}
+
+#cords {
+  margin: 20px 0px;
+}
+.group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  border-top: 1px solid lightgray;
+  padding: 20px 0px;
+}
+
+.group > div {
+  margin: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 150px;
+  padding: 10px;
+  font-family: 'Helvetica';
+  border-radius: 0.25rem;
+}
+
+.latA, .longA {
+  border: 1px solid rgba(240, 39, 39, .5);
+}
+
+.latB, .longB {
+  border: 1px solid rgba(11, 134, 206, .5);
+}
+
+.radius {
+  border: 1px solid rgba(0, 163, 14, .5);
+}
+
+button {
+  padding: 8px;
+  background-color: white;
+  border: 1px solid lightgray;
+  box-shadow: 1px 1px 2px 0px lightslategray;
+  margin: 10px 10px;
+}
+
