@@ -13,7 +13,7 @@ body {
 }
 
 #map {
-  height: 50%;
+  height: 100%;
 }
 
 .main {
@@ -25,6 +25,7 @@ body {
 #cords {
   margin: 20px 0px;
 }
+
 .group {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -38,7 +39,7 @@ label {
   margin-bottom: 10px;
 }
 
-.group input {
+input[type='number'] {
   width: 100%;
   padding: 10px;
   font-family: 'Helvetica';
@@ -52,6 +53,10 @@ label {
 
 .latB, .longB {
   border: 1px solid rgba(11, 134, 206, .5);
+}
+
+.calcInput {
+  border: 1px solid lightgray;
 }
 
 .radius {
@@ -69,6 +74,10 @@ button:hover {
   cursor: pointer
 }
 
+button:active {
+  transform: scale(0.95);
+}
+
 .calc {
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
@@ -83,18 +92,5 @@ button:hover {
   align-items: center;
 }
 
-.label {
-  display: block;
-}
 
-.calc input[type='number'] {
-  width: 100%;
-  padding: 5px;
-  box-sizing: border-box;
-  padding: 10px;
-  font-family: 'Helvetica';
-  border-radius: 0.25rem;
-  border: 1px solid lightgray;
-  margin: 0px 10px;
-}
 
