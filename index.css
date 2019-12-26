@@ -34,7 +34,7 @@ label {
 }
 
 input {
-  width: 150px;
+  width: 100%;
   padding: 10px;
   font-family: 'Helvetica';
   border-radius: 0.25rem;
